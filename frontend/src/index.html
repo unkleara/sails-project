@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="fragment" content="!" />
+    <base href="/">
+
+    <!-- Responsive META -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <!-- bower:css -->
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+</head>
+<body ng-controller="AppCtrl">
+
+<header class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+<div class="row">
+    <left-panel-header class="hidden-xs"></left-panel-header>
+
+    <div class="col-xs-8">
+        <nav-bar class="navbar-adt"></nav-bar>
+    </div>
+
+    <right-panel-header class="hidden-xs"></right-panel-header>
+</div>
+</div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <side-panel class="hidden-xs" visible="leftVisible" alignment="left">
+            <online-user-list></online-user-list>
+        </side-panel>
+
+
+            <section id="content" class="fadeZoom col-xs-12 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2" ui-view>
+
+            </section>
+
+
+        <side-panel class="hidden-xs" visible="rightVisible" alignment="right">
+            <activity-list></activity-list>
+        </side-panel>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function onLoad() {
+        var io;
+        Object.defineProperty(window, 'io', {
+            get: function get() {
+                return io;
+            },
+            set: function set(value) {
+                var sails;
+                io = value;
+                Object.defineProperty(io, 'sails', {
+                    get: function get() {
+                        return sails;
+                    },
+                    set: function set(value) {
+                        sails = value;
+                        sails.url = 'http://localhost:1337';
+                    }
+                });
+            }
+        });
+    })();
+</script>
+<!-- bower:js -->
+<!-- endbower -->
+
+
+
+
+<!-- inject:js -->
+<!-- endinject -->
+
+</body>
+</html>

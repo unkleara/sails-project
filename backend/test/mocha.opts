@@ -1,0 +1,5 @@
+--reporter spec
+--colors
+--timeout 5000
+test/bootstrap.test.js
+test/**/*test.js

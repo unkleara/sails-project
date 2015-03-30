@@ -1,0 +1,27 @@
+{
+  "name": "sails-project",
+  "version": "0.0.1",
+  "description": "Demo project using Sails.js and Angular/rxjs with separated backend and frontend.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "install": "cd backend && npm install && cd ../frontend && npm install && bower install",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unkleara/sails-project.git"
+  },
+  "keywords": [
+    "sails",
+    "angular",
+    "rxjs",
+    "SPA"
+  ],
+  "author": "Ara Hacobian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unkleara/sails-project/issues"
+  },
+  "homepage": "https://github.com/unkleara/sails-project"
+}

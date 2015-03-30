@@ -1,0 +1,17 @@
+<div class="col-xs-2 sidePanelHeader">
+    <h4 id="rightPanel" ng-click="toggleRightPanel($event)">ACTIVITY FEED</h4>
+    <form name="postForm" class="form-horizontal pull-right" ng-controller="MessageCtrl" novalidate>
+        <div class="form-group" ng-hide="!rightVisible">
+
+            <div class="input-group">
+                <input type="text"
+                       class="form-control input-sm"
+                       data-ng-model="message.body"
+                       placeholder="Post something...">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="createMessage()">Submit</button>
+                    </span>
+            </div><!-- /input-group -->
+        </div>
+    </form>
+</div>

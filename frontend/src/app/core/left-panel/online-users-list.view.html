@@ -1,0 +1,17 @@
+<ul class="list-group">
+    <li ng-repeat="user in vm.users.data"
+        class="list-group-item animated fadeInUp"
+        ng-mouseover="isCollapsed=false"
+        ng-mouseleave="isCollapsed=true"
+        is-collapsed="isCollapsed"
+        ng-show="user.signedIn">
+        <div class="pull-left">
+            <avatar member="{{user.username}}" width="25px" height="25px"></avatar>
+
+        </div>
+        <span class="husers">{{user.displayName}}</span>
+
+        <div collapse="vm.isCollapsed">
+        </div>
+    </li>
+</ul>
